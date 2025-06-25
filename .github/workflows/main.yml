@@ -4,7 +4,7 @@ env: # Set the secret as an input
   #  docker_username: ${{ github.actor }} 
  docker_username: purgatorius77 #instead of Elmeri 
  docker_password: ${{ secrets.GITHUB_TOKEN }} #Nees to be set to be made available to the workflow
- GIT_COMMIT: ${{ secrets.GITHUB_TOKEN }}
+ GIT_COMMIT: ${{ github.sha }}
 jobs:
   Build:
     runs-on: ubuntu-latest
